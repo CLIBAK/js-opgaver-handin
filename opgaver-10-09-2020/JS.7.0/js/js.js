@@ -10,7 +10,7 @@ let empty = function (target) {
     }
 }
 
-let fillLeft = function (target) {
+let fill = function (target) {
     let art = target;
 
     let img = document.createElement('img'); // create element
@@ -47,7 +47,7 @@ let t1 = function (ev) {
         empty(elm);
     } else {
         switch (id) {
-            case 'left': fillLeft(elm); break;
+            case 'left': fill(elm); break;
         }
     }
 }
@@ -55,7 +55,7 @@ let t1 = function (ev) {
 let initialize = function () {
     
     let left = $('left');
-    fillLeft(left);
+    fill(left);
     left.addEventListener('click', t1, false);
 }
 
@@ -71,14 +71,14 @@ let t2 = function (ev) {
         empty(elm);
     } else {
         switch (id) {
-            case 'center': fillLeft(elm); break;
+            case 'center': fill(elm); break;
         }
     }
 }
 
 let initialize2 = function () {
     let center = $('center');
-    fillLeft(center);
+    fill(center);
     center.addEventListener('click', t2, false);
     center.style.color = 'yellow'
 }
@@ -94,14 +94,14 @@ let t3 = function (ev) {
         empty(elm);
     } else {
         switch (id) {
-            case 'right': fillLeft(elm); break;
+            case 'right': fill(elm); break;
         }
     }
 }
 
 let initialize3 = function () {
     let right = $('right');
-    fillLeft(right);
+    fill(right);
     right.addEventListener('click', t3, false);
     right.style.color = 'green'
 }
